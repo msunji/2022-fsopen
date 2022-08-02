@@ -13,3 +13,12 @@
 
 ---
 
+## 1.3
+- [x] Modify the variable definitions and refactor accordingly
+
+## 1.4
+- [ ] Once again, modify the variable definitions, this time by placing the objects in an array. Refactor accordingly.
+  - At this point, assume there are always three items - no loops yet at this point, but do not pass the different objects as eparate props and instead pass them directly as an array
+
+## 1.5
+- [ ] Change the course and its parts into a single JS object. Refactor accordingly.
