@@ -4,12 +4,18 @@ const Header = ({ courseName }) => {
   )
 }
 
+const Part = ({ partName, numEx }) => {
+  return (
+    <p>{partName} {numEx}</p>
+  )
+}
+
 const Content = ({ part1, part2, part3 }) => {
   return (
     <>
-      <p>{part1[0]} {part1[1]}</p>
-      <p>{part2[0]} {part2[1]}</p>
-      <p>{part3[0]} {part3[1]}</p>
+      <Part partName={part1[0]} numEx={part1[1]} />
+      <Part partName={part2[0]} numEx={part2[1]} />
+      <Part partName={part3[0]} numEx={part3[1]} />
     </>
   )
 }
