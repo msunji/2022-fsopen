@@ -26,22 +26,22 @@
 ---
 **Unicafe Exercises**
 ## 1.6
-- [ ]
+- [x] Collect customer feedback (three options: good, neutral and bad) and then display the total number of collected feedback for each category. 
 
 ## 1.7
-- [ ]
+- [x] Expand the app to show more statistics about the gathered feedback. You'll want to show: the total number of collected feedback, the average score (good: 1, neutral: 0, and bad: -1), as well as the percentage of positive feedback.
 
 ## 1.8
-- [ ]
+- [x] Refactor the app so statistics are extracted into a `Statistics` component. State should remain in `App`
 
 ## 1.9
-- [ ]
+- [x] Change your app to display statistics only once feedback has been gathered
 
 ## 1.10
-- [ ]
+- [x] Refactor the application by extracting the following components: `Button` for buttons to submit feedback and `StatisticLine` for displaying a single statistic
 
-## 1.11
-- [ ]
+## 1.11*
+- [x] Display statistics in an HTML table
 
 ---
 **Anecdotes Exercises**
