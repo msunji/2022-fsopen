@@ -46,10 +46,10 @@
 ---
 **Anecdotes Exercises**
 ## 1.12
-- [ ]
+- [x] Add a button that can be clicked to display a random anecdote
 
 ## 1.13
-- [ ]
+- [x] Expand the app by letting users vote for the displayed anecdote
 
 ## 1.14
-- [ ]
+- [x] Display the anecdote with the largest number of votes. If multiple anecdotes are tied for first place, just show one of them.
