@@ -24,6 +24,7 @@
 - [x] Change the course and its parts into a single JS object. Refactor accordingly.
 
 ---
+**Unicafe Exercises**
 ## 1.6
 - [ ]
 
@@ -42,6 +43,8 @@
 ## 1.11
 - [ ]
 
+---
+**Anecdotes Exercises**
 ## 1.12
 - [ ]
 
