@@ -20,13 +20,13 @@
 **Phonebook exercises**
 
 ## 2.6
-- [ ] Implement the addition of a person to the phonebook
+- [x] Implement the addition of a person to the phonebook
 
 ## 2.7
-- [ ] Prevent a user from being able to add names that already exist in the phonebook. Issue a warning with the `alert` command if a user attemps this.
+- [x] Prevent a user from being able to add names that already exist in the phonebook. Issue a warning with the `alert` command if a user attemps this.
 
 ## 2.8
-- [ ] Expand your application by allowing users  to add phone numbers to the phonebook.
+- [ ] Expand your application by allowing users to add phone numbers to the phonebook.
 
 ## 2.9
 - [ ] Implement a search field to filter the list of people by name
