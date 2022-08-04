@@ -4,13 +4,22 @@ const App = () => {
   const [persons, setPersons] = useState([{ name: 'Arto Hellas' }]);
   const [newName, setNewName] = useState('');
 
+  const checkNameExists = (name) => {
+    return persons.some(person => person.name.toLowerCase() === name.toLowerCase());
+  }
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
+
+    if (checkNameExists(newName)) return alert(`${newName} has already been added to the phonebook.`);
+
     const personObj = {
       name: newName
     }
-    setPersons(persons.concat(personObj)); // note that concat returns a new array
+    setPersons(persons.concat(personObj));
+     // note that concat returns a new array
     setNewName('');
+
   }
 
   const handleNameChange = (e) => {
