@@ -1,4 +1,5 @@
-const Persons = ({ persons }) => {
+const Persons = ({ persons, setFilter }) => {
+  console.log(setFilter);
   return (
     <ul>
       {persons.map(({ name, number }) => (
