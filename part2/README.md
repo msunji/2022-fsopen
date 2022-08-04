@@ -9,7 +9,7 @@
 - [x] If you haven't done it yet, calculate the sum with `reduce`
 
 ## 2.4
-- [ ] Allow for an arbitrary number of courses.
+- [x] Allow for an arbitrary number of courses.
 
 ## 2.5
-- [ ] Declare the `Course` component as a separate module imported by the `App` component. You can include all the subcomponents in the `Course` module.
+- [x] Declare the `Course` component as a separate module imported by the `App` component. You can include all the subcomponents in the `Course` module.
