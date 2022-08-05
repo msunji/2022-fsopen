@@ -29,7 +29,8 @@
 - [x] Expand your application by allowing users to add phone numbers to the phonebook.
 
 ## 2.9
-- [ ] Implement a search field to filter the list of people by name
+- [x] Implement a search field to filter the list of people by name
 
 ## 2.10
-- [ ] If you haven't already done it, refactor your app into at least three components. You may want to start  with: the search filter, the form, and the component that renders a single person's details.
+- [x] If you haven't already done it, refactor your app into at least three components. You may want to start  with: the search filter, the form, and the component that renders a single person's details.
+
