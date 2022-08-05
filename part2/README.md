@@ -46,4 +46,4 @@
 - [x] When names of multiple countries are shown, show a button next to the country's name. When pressed, it should show the country-view for that country (basically, show basic info for that country)
 
 ## 2.14
-- [ ] Add weather data to the country view.
+- [x] Add weather data to the country view.
