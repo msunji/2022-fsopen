@@ -40,10 +40,10 @@
 ---
 **Countries exercises**
 ## 2.12
-- [ ] Create an application that pulls data from the REST Countries API (https://restcountries.com/). A country or a list of countries is shown when a user types a search query in the search field. If there are over 10 countries that match the query, users are prompted to make their query more specific. Otherwise, show a list of all countries. If only one country matches the query, show basic data (capital, area, flag, languages spoken)
+- [x] Create an application that pulls data from the REST Countries API (https://restcountries.com/). A country or a list of countries is shown when a user types a search query in the search field. If there are over 10 countries that match the query, users are prompted to make their query more specific. Otherwise, show a list of all countries. If only one country matches the query, show basic data (capital, area, flag, languages spoken)
 
 ## 2.13
-- [ ] When names of multiple countries are shown, show a button next to the country's name. When pressed, it should show the country-view for that country (basically, show basic info for that country)
+- [x] When names of multiple countries are shown, show a button next to the country's name. When pressed, it should show the country-view for that country (basically, show basic info for that country)
 
 ## 2.14
 - [ ] Add weather data to the country view.
