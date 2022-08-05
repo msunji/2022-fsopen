@@ -1,12 +1,13 @@
-const Persons = ({ persons, setFilter }) => {
-  console.log(setFilter);
+const Persons = ({ persons, filterName }) => {
   return (
     <ul>
-      {persons.map(({ name, number }) => (
-        <li key={name}>
-          {name} {number}
-        </li>
-      ))}
+      {persons
+        .filter(({ name }) => name.toLowerCase().includes(filterName.toLowerCase()))
+        .map(({ name, number }) => (
+          <li key={name}>
+            {name} {number}
+          </li>
+        ))}
     </ul>
   );
 };
