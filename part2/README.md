@@ -34,3 +34,14 @@
 ## 2.10
 - [x] If you haven't already done it, refactor your app into at least three components. You may want to start  with: the search filter, the form, and the component that renders a single person's details.
 
+## 2.11
+- [ ]
+
+## 2.12
+- [ ]
+
+## 2.13
+- [ ]
+
+## 2.14
+- [ ]
