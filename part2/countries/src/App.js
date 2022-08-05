@@ -1,29 +1,23 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import View from './components/View';
 
-const View = ({ countryInfo }) => {
+const Country = ({ countryInfo }) => {
   const { name, flags, languages, capital, area } = countryInfo;
+  const [open, setOpen] = useState(false);
+
   return (
-    <div>
-      <div>
-        <h1>{name.common}</h1>
-        <p>
-          <b>Capital</b> {capital}
-        </p>
-        <p>
-          <b>Area</b> {area}
-        </p>
-      </div>
-      <div>
-        <b>languages</b>
-        {/* <ul>
-          {}
-        </ul> */}
-      </div>
-      <div>
-        <img src={flags.svg} alt={`${name.common} flag`} width="400" />
-      </div>
-    </div>
+    <>
+      <p>
+        {name.common} <button onClick={() => setOpen(!open)}>show</button>
+      </p>
+      {open ? (
+        <View
+          key={name.common}
+          countryInfo={{ name, flags, languages, capital, area }}
+        />
+      ) : null}
+    </>
   );
 };
 
@@ -35,8 +29,8 @@ const Countries = ({ countries }) => {
   if (numCountries <= 10 && numCountries > 1) {
     return (
       <div>
-        {countries.map(({ name }) => (
-          <p key={name.common}>{name.common}</p>
+        {countries.map(({ name, flags, languages, capital, area }) => (
+          <Country key={name.common} countryInfo={{ name, flags, languages, capital, area }} />
         ))}
       </div>
     );
