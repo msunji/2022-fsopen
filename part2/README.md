@@ -47,3 +47,26 @@
 
 ## 2.14
 - [x] Add weather data to the country view.
+
+---
+**Phonebook Exercises Continued**
+## 2.15
+- [ ] Save phonebook entries to the backend server.
+
+## 2.16
+- [ ] Extract code that handles communication with the backend into its own module
+
+## 2.17
+- [ ] Add delete entry function. Confirm action with the `window.confirm` method
+
+## 2.18
+- [ ] If a number is added to an already existing user, replace the old number with the new number. HTTP PUT method is recommended. Again, user needs to confirm this action thru the `window.confirm` method
+
+## 2.19
+- [ ] Add a styled message to show a notification that lasts for a few seconds after a sucessful operation is executed (person is added or a number is changed)
+
+## 2.20
+- [ ] Show a styled message when a user encounters an error.
+
+
+
