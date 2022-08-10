@@ -11,7 +11,8 @@ const App = () => {
   const [newName, setNewName] = useState('');
   const [newNumber, setNewNumber] = useState('');
   const [filter, setFilter] = useState('');
-  const [toastMsg, setToastMsg] = useState('Test Toast');
+  const [toastMsg, setToastMsg] = useState('');
+  const [errorType, setErrorType] = useState(false);
 
   useEffect(() => {
     personService.getEntries().then((allEntries) => {
@@ -23,6 +24,19 @@ const App = () => {
     name: newName,
     number: newNumber,
   };
+
+  const removeToast = () => {
+    if (errorType) {
+      setTimeout(() => {
+        setToastMsg('');
+        setErrorType(false);
+      }, 4000);
+    } else {
+      setTimeout(() => {
+        setToastMsg('');
+      }, 4000);
+    }
+  }
 
   const handleUpdate = () => {
     if (
@@ -43,8 +57,15 @@ const App = () => {
               person.id === updatedEntry.id ? updated : person
             )
           );
+          setToastMsg(`Successfully updated ${newName}'s number`);
+          removeToast();
           setNewName(() => '');
           setNewNumber(() => '');
+        })
+        .catch((err) => {
+          setErrorType(true);
+          setToastMsg(`We've run into some problems, ${newName} seems to be missing from the phonebook.`)
+          removeToast();
         });
     }
   };
@@ -88,17 +109,25 @@ const App = () => {
 
     if (nameExists(newName) && !numExists(newNumber)) return handleUpdate();
 
-    return personService.addEntry(entryObj).then((newEntry) => {
-      setPersons(persons.concat(newEntry));
-      // note that concat returns a new array
-      setNewName(() => '');
-      setNewNumber(() => '');
-    });
+    return personService
+      .addEntry(entryObj)
+      .then((newEntry) => {
+        setPersons(persons.concat(newEntry));
+        // note that concat returns a new array
+        setToastMsg(`Successfully added ${newName} to phonebook`);
+        removeToast();
+        setNewName(() => '');
+        setNewNumber(() => '');
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   return (
     <div>
       <h1>Phonebook</h1>
+      {toastMsg && (<Toast message={toastMsg} errorState={errorType} />)}
       <Filter handleFilter={handleFilterChange} />
       <div>
         <h2>Add New Entry</h2>
@@ -110,7 +139,6 @@ const App = () => {
           handleNumber={handleNumberChange}
         />
       </div>
-      <Toast message={toastMsg} />
       <div>
         <h2>Numbers</h2>
         <Persons
