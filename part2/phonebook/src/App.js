@@ -10,8 +10,6 @@ const App = () => {
   const [newNumber, setNewNumber] = useState('');
   const [filter, setFilter] = useState('');
 
-
-
   useEffect(() => {
     personService.getEntries().then(allEntries => {
       setPersons(allEntries);
@@ -50,6 +48,14 @@ const App = () => {
     setNewNumber(e.target.value);
   };
 
+  const handleDeleteEntry = (id, name) => {
+    if (window.confirm(`Delete ${name}?`)) {
+      personService.deleteEntry(id);
+      setPersons(persons.filter(person => person.id !== id));
+    }
+    return;
+  }
+
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
   };
@@ -68,7 +74,7 @@ const App = () => {
       </div>
       <div>
         <h2>Numbers</h2>
-        <Persons persons={persons} filterName={filter} />
+        <Persons persons={persons} filterName={filter} handleDelete={handleDeleteEntry} />
       </div>
     </div>
   );
