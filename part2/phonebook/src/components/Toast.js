@@ -1,8 +1,8 @@
-const Toast = ({ message }) => {
+const Toast = ({ message, errorState }) => {
   if (message === null) return null;
 
   return (
-    <div className="toast">
+    <div className={`toast ${errorState ? 'toast-error' : 'toast-success'}`}>
       {message}
     </div>
   )
