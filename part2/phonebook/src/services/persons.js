@@ -15,5 +15,10 @@ const deleteEntry = (entryId) => {
   return axios.delete(`${uri}/${entryId}`).then(() => console.log('delete successful'));
 }
 
+const updateEntry = (entryId, updatedEntry) => {
+  const req = axios.put(`${uri}/${entryId}`, updatedEntry);
+  return req.then(res => res.data);
+}
+
 // eslint-disable-next-line import/no-anonymous-default-export
-export default { getEntries, addEntry, deleteEntry }
+export default { getEntries, addEntry, deleteEntry, updateEntry }
