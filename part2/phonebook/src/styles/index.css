@@ -10,3 +10,13 @@ body {
   margin: 10px 0;
   font-weight: 800;
 }
+
+.toast-error {
+  background: #ffb5c4;
+  color: #3d0101;
+}
+
+.toast-success {
+  background: #adffb7;
+  color: #013d1f;
+}
