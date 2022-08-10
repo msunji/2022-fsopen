@@ -69,10 +69,10 @@ Conditions are as follows:
 
 
 ## 2.19
-- [ ] Add a styled message to show a notification that lasts for a few seconds after a sucessful operation is executed (person is added or a number is changed)
+- [x] Add a styled message to show a notification that lasts for a few seconds after a sucessful operation is executed (person is added or a number is changed)
 
 ## 2.20
-- [ ] Show a styled message when a user encounters an error.
+- [x] Show a styled message when a user encounters an error.
 
 
 
