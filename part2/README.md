@@ -51,10 +51,10 @@
 ---
 **Phonebook Exercises Continued**
 ## 2.15
-- [ ] Save phonebook entries to the backend server.
+- [x] Save phonebook entries to the backend server.
 
 ## 2.16
-- [ ] Extract code that handles communication with the backend into its own module
+- [x] Extract code that handles communication with the backend into its own module
 
 ## 2.17
 - [ ] Add delete entry function. Confirm action with the `window.confirm` method
