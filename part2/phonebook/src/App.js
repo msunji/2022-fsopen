@@ -1,14 +1,17 @@
+import './styles/index.css';
 import personService from './services/persons';
 import { useState, useEffect } from 'react';
 import Filter from './components/Filter';
 import PersonInputs from './components/PersonInputs';
 import Persons from './components/Persons';
+import Toast from './components/Toast';
 
 const App = () => {
   const [persons, setPersons] = useState([]);
   const [newName, setNewName] = useState('');
   const [newNumber, setNewNumber] = useState('');
   const [filter, setFilter] = useState('');
+  const [toastMsg, setToastMsg] = useState('Test Toast');
 
   useEffect(() => {
     personService.getEntries().then((allEntries) => {
@@ -107,6 +110,7 @@ const App = () => {
           handleNumber={handleNumberChange}
         />
       </div>
+      <Toast message={toastMsg} />
       <div>
         <h2>Numbers</h2>
         <Persons
