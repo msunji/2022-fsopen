@@ -57,7 +57,8 @@
 - [x] Extract code that handles communication with the backend into its own module
 
 ## 2.17
-- [ ] Add delete entry function. Confirm action with the `window.confirm` method
+- [x] Add delete entry function. Confirm action with the `window.confirm` method
+- Ran into a few errors here, and then realised I had forgotten to pass the id of the phonebook entry to be deleted.
 
 ## 2.18
 - [ ] If a number is added to an already existing user, replace the old number with the new number. HTTP PUT method is recommended. Again, user needs to confirm this action thru the `window.confirm` method
