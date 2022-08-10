@@ -11,5 +11,9 @@ const addEntry = (entryObj) => {
   return req.then(res => res.data);
 }
 
+const deleteEntry = (entryId) => {
+  return axios.delete(`${uri}/${entryId}`).then(() => console.log('delete successful'));
+}
+
 // eslint-disable-next-line import/no-anonymous-default-export
-export default { getEntries, addEntry }
+export default { getEntries, addEntry, deleteEntry }
