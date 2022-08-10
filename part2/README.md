@@ -58,10 +58,15 @@
 
 ## 2.17
 - [x] Add delete entry function. Confirm action with the `window.confirm` method
-- Ran into a few errors here, and then realised I had forgotten to pass the id of the phonebook entry to be deleted.
+Ran into a few errors here, and then realised I had forgotten to pass the id of the phonebook entry to be deleted.
 
 ## 2.18
-- [ ] If a number is added to an already existing user, replace the old number with the new number. HTTP PUT method is recommended. Again, user needs to confirm this action thru the `window.confirm` method
+- [x] If a number is added to an already existing user, replace the old number with the new number. HTTP PUT method is recommended. Again, user needs to confirm this action thru the `window.confirm` method
+
+Conditions are as follows:
+1. If a new entry is added and the number and name match an existing phonebook entry, show an alert that says the exact entry already exists
+2. If a new entry is added and the name matches and existing phonebook entry, but the number doesn't match said entry's existing number, then show a dialog box that asks for a user to confirm whether they'd like to update the entry or not
+
 
 ## 2.19
 - [ ] Add a styled message to show a notification that lasts for a few seconds after a sucessful operation is executed (person is added or a number is changed)
