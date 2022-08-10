@@ -4,7 +4,7 @@ const Persons = ({ persons, filterName, handleDelete }) => {
       {persons
         .filter(({ name }) => name.toLowerCase().includes(filterName.toLowerCase()))
         .map(({ id, name, number }) => (
-          <li key={name}>
+          <li key={id}>
             {name} {number} <button onClick={() => handleDelete(id, name)}>delete</button>
           </li>
         ))}
