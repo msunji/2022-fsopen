@@ -21,7 +21,7 @@ Generate a new id for the phonebook entry with the Math.random function. Use a b
 - [x] Implement error handling for creating new entries. The request isn't allowed to success if a number or name is missing OR the name already exists in the phonebook. Be sure to respond to requests like these with the approprite status code, and asend back info that explains the reason for the error.
 
 ## 3.7
-- [ ] 
+- [x] Add morgan middleware to the app and log messages using the *tiny* configuration
 
 ## 3.8
-- [ ]
+- [x] Configure morgan to use a custom token to show data sent in HTTP POST requests.
