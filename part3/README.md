@@ -1,16 +1,16 @@
 # Part 3 - Programming a server with NodeJS and Express
 
 ## 3.1
-- [ ] Implement a Node app that returns a hardcoded list of phonebook entries from the address `http://localhost:3001/api/persons`. The application must be started with `npm start` and offer an `npm run dev` command that restarts the server whenever changes are made and saved to a file in the source code.
+- [x] Implement a Node app that returns a hardcoded list of phonebook entries from the address `http://localhost:3001/api/persons`. The application must be started with `npm start` and offer an `npm run dev` command that restarts the server whenever changes are made and saved to a file in the source code.
 
 ## 3.2
-- [ ] Implement a page at the address `http://localhost:3001/info` that shows the number of people listed in the phonebook, as well as the time and date the request was received.
+- [x] Implement a page at the address `http://localhost:3001/info` that shows the number of people listed in the phonebook, as well as the time and date the request was received.
 
 ## 3.3
-- [ ] Implement functionality for showing the info for a single phonebook entry. If an etry for a given id is not found, the server must respond with the appropriate status code.
+- [x] Implement functionality for showing the info for a single phonebook entry. If an etry for a given id is not found, the server must respond with the appropriate status code.
 
 ## 3.4
-- [ ] Implement functionality that makes it possible to *delete* a single phonebook entry by making an HTTP DELETE request to the unique URL of that phonebook entry.
+- [x] Implement functionality that makes it possible to *delete* a single phonebook entry by making an HTTP DELETE request to the unique URL of that phonebook entry.
 
 ## 3.5
 - [ ] Expand the backend so that new phonebook entries can be added by making HTTP POST requests to the address `http://localhost:3001/api/persons`.
