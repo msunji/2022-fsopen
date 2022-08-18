@@ -1,8 +1,15 @@
 const express = require('express');
+const morgan = require('morgan');
 const app = express();
 const PORT = 3001;
 
 app.use(express.json());
+
+morgan.token('body', (req, res) => {
+  return JSON.stringify(req.body); // convert a JS object or value to a JSON string
+})
+
+app.use(morgan(':method :url :status :res[content-length] :response-time ms - :body'));
 
 let persons = [
   {
