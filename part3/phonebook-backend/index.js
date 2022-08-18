@@ -2,33 +2,34 @@ const express = require('express');
 const app = express();
 const PORT = 3001;
 
+app.use(express.json());
+
 let persons = [
   {
-    "id": 1,
+    "id": 21,
     "name": "Arto Hellas",
     "number": "040-123456"
   },
   {
-    "id": 2,
+    "id": 11,
     "name": "Ada Lovelace",
     "number": "39-44-5323523"
   },
   {
-    "id": 3,
+    "id": 33,
     "name": "Dan Abramov",
     "number": "12-43-234345"
   },
   {
-    "id": 4,
+    "id": 45,
     "name": "Mary Poppendieck",
     "number": "39-23-6423122"
   },
-  {
-    "id": 5,
-    "name": "Majima Goro",
-    "number": "12-23-45356465"
-  },
 ];
+
+const genId = () => {
+  return Math.floor(Math.random() * 100);
+}
 
 app.get('/info', (req, res) => {
   const phonebookLength = persons.length;
@@ -50,6 +51,26 @@ app.get('/api/persons/:id', (req, res) => {
   } else {
     res.status(404).end();
   }
+})
+
+app.post('/api/persons', (req, res) => {
+  const newEntry = req.body;
+
+  const exists = persons.some(person => person.name.toLowerCase() === newEntry.name.toLowerCase());
+
+  if (!newEntry.number || !newEntry.name) {
+    return res.status(400).json({
+      error: 'Missing name or number'
+    })
+  }
+  if (exists) {
+    return res.status(400).json({
+      error: "Entry alredy exists in phonebook"
+    })
+  }
+  newEntry.id = genId();
+  console.log('new entry', newEntry);
+  res.json(newEntry);
 })
 
 app.delete('/api/persons/:id', (req, res) => {
